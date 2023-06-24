@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body>
+    <main class="flex items-center justify-center bg-gradient-to-r from-slate-900 to-slate-400 h-screen">
+        <section class="w-full max-w-2xl border border-gray-400 p-4 bg-white bg-opacity-30 rounded-2xl">    
+            <ul class="flex flex-row items-center list-none text-lg font-bold text-gray-950">
+
+                <li class="px-4 py-2 border-b-2 border-yellow-600 cursor-pointer">Login</li>
+                <li class="px-4 py-2 cursor-pointer open-icon">Register</li>
+
+            </ul>
+
+            <div class="modal-box-reg">
+                <div
+                    class="w-full max-w-xs rounded-2xl overflow-hidden flex flex-row sm:flex-col h-40 sm:h-auto sm:max-w-md">
+                    <div
+                        class="w-1/3 sm:w-full z-10 sm:h-28 bg-gradient-to-r from-rose-700 to-blue-700 h-full text-white flex items-center justify-center relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                class="bi bi-person-plus w-7 h-7 lg:hover:animate-bounce cursor-pointer" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                <path fill-rule="evenodd"
+                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                            </svg>
+                        <div
+                            class="absolute top-1.5 left-3 flex flex-wrap items-center justify-center w-10 h-10 cursor-pointer close-icon">
+                            <span class="bg-white rounded w-7 h-0.5 absolute rotate-45"></span>
+                            <span class="bg-white rounded w-7 h-0.5 absolute -rotate-45"></span>
+                        </div>
+                    </div>
+
+                    <div class="w-2/3 sm:w-full sm:h-96 bg-white p-4 flex flex-col gap-4 h-full">
+
+                        <div class="flex flex-col gap-2">
+
+                            <label for="name" class="text-sm font-medium text-gray-800">name:</label>
+                            <div class="relative">
+                                <input type="text" class="custom-input-modal" name="" id="email"
+                                    placeholder="Enter Your Name:">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-person ms-2 w-5 h-5 absolute top-2 left-1 cursor-pointer text-blue-800"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                </svg>
+                            </div>
+
+                            <label for="email" class="text-sm font-medium text-gray-800">email:</label>
+                            <div class="relative">
+                                <input type="text" class="custom-input-modal" name="" id="email"
+                                    placeholder="Enter Your Email:">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-envelope ms-2 w-5 h-5 absolute top-2 left-1 cursor-pointer text-blue-800"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg>
+                            </div>
+
+                            <label for="password" class="text-sm font-medium text-gray-800">password:</label>
+                            <div class="relative">
+                                <input type="password" class="custom-input-modal" name="" id="email"
+                                    placeholder="Enter Your Password:">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-lock ms-2 w-5 h-5 absolute top-2 left-1 cursor-pointer text-blue-800"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+                                </svg>
+                            </div>
+                            
+                        </div>
+
+                        <button class="btn bg-gradient-to-r from-blue-700 to-red-700  text-white modal-btn lg:hover:animate-pulse">Sing up</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-4">
+                <h4 class="text-xl font-bold">Login With:</h4>
+                <div class="flex items-center gap-4 mb-8">
+                    <!-- linkedin -->
+                    <div
+                        class="flex items-center justify-center w-11 h-11 text-white bg-blue-900 rounded-full cursor-pointer hover:text-blue-900 hover:bg-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-linkedin w-7 h-7 open-icon" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </div>
+                    <!-- google -->
+                    <div
+                        class="flex items-center justify-center w-11 h-11 text-white bg-red-600 rounded-full cursor-pointer hover:bg-white hover:text-red-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-google w-8 h-8 open-icon" viewBox="0 0 16 16">
+                            <path
+                                d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                        </svg>
+                    </div>
+                    <!-- github -->
+                    <div
+                        class="flex items-center justify-center w-11 h-11 text-white bg-slate-800 rounded-full cursor-pointer hover:bg-white hover:text-slate-800 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-github w-9 h-9 open-icon" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- modalTwiter -->
+                <div class="modal-box-link">
+                    <!-- modal -->
+                    <div
+                        class="w-full max-w-xs rounded-2xl overflow-hidden flex flex-row sm:flex-col h-40 sm:h-auto sm:max-w-md">
+                        <!-- logo -->
+                        <div
+                            class="w-1/3 sm:w-full z-10 sm:h-28 bg-blue-900 h-full text-white flex items-center justify-center relative">
+                            <a href="https://www.linkedin.com/in/ali-nikseresht-966560258/">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-linkedin w-7 h-7 lg:hover:animate-bounce" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                            </a>
+                            <div
+                                class="absolute top-1.5 left-3 flex flex-wrap items-center justify-center w-10 h-10 cursor-pointer close-icon">
+                                <span class="bg-white rounded w-7 h-0.5 absolute rotate-45"></span>
+                                <span class="bg-white rounded w-7 h-0.5 absolute -rotate-45"></span>
+                            </div>
+                        </div>
+                        <!-- input -->
+                        <div class="w-2/3c sm:w-full sm:h-40 bg-white p-4 flex flex-col gap-4 h-full">
+                            <!-- email -->
+                            <div class="flex flex-col gap-2">
+                                <label for="email" class="text-sm font-medium text-gray-800">email:</label>
+                                <div class="relative">
+                                    <input type="text" class="custom-input-modal" name="" id="email"
+                                        placeholder="Enter Your Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        class="bi bi-envelope  ms-2 w-5 h-5 absolute top-2 left-1 cursor-pointer text-blue-900"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- submit-modal -->
+                            <button class="btn bg-blue-900 text-white modal-btn lg:hover:animate-pulse">Login</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- googleModal -->
+                <div class="modal-box-google ">
+                    <!-- modal -->
+                    <div
+                        class="w-full max-w-xs rounded-2xl overflow-hidden flex flex-row sm:flex-col h-40 sm:h-auto sm:max-w-md">
+                        <!-- logo -->
+                        <div
+                            class="w-1/3 sm:w-full sm:h-28 bg-red-600 h-full text-white flex items-center justify-center relative">
+                            <a href="alinksht@gmail.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-google w-7 h-7 lg:hover:animate-bounce" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
+                                </svg>
+                            </a>
+                            <div
+                                class="absolute top-1.5 left-3 flex flex-wrap items-center justify-center w-10 h-10 cursor-pointer close-icon">
+                                <span class="bg-white rounded w-7 h-0.5 absolute rotate-45"></span>
+                                <span class="bg-white rounded w-7 h-0.5 absolute -rotate-45"></span>
+                            </div>
+                        </div>
+                        <!-- input -->
+                        <div class="w-2/3c sm:w-full sm:h-40 bg-white p-4 flex flex-col gap-4 h-full">
+                            <!-- email -->
+                            <div class="flex flex-col gap-2">
+                                <label for="email" class="text-sm font-medium text-gray-800">email:</label>
+                                <div class="relative">
+                                    <input type="text" class="custom-input-modal" name="" id="email"
+                                        placeholder="Enter Your Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        class="bi bi-envelope  ms-2 w-5 h-5 absolute top-2 left-1 cursor-pointer text-red-600"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- submit-modal -->
+                            <button class="btn bg-red-600 text-white modal-btn lg:hover:animate-pulse">Login</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- googleModal -->
+                <!-- githubModal -->
+                <div class="modal-box-git">
+                    <!-- modal -->
+                    <div
+                        class="w-full max-w-xs rounded-2xl overflow-hidden flex flex-row sm:flex-col h-40 sm:h-auto sm:max-w-md">
+                        <!-- logo -->
+                        <div
+                            class="w-1/3 sm:w-full sm:h-28 bg-slate-800 h-full text-white flex items-center justify-center relative">
+                            <a href="https://github.com/AliNikseresht">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    class="bi bi-github w-8 h-8 lg:hover:animate-bounce" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </a>
+                            <div
+                                class="absolute top-1.5 left-3 flex flex-wrap items-center justify-center w-10 h-10 cursor-pointer close-icon">
+                                <span class="bg-white rounded w-7 h-0.5 absolute rotate-45"></span>
+                                <span class="bg-white rounded w-7 h-0.5 absolute -rotate-45"></span>
+                            </div>
+                        </div>
+                        <!-- input -->
+                        <div class="w-2/3c sm:w-full sm:h-40 bg-white p-4 flex flex-col gap-4 h-full">
+                            <!-- github -->
+                            <div class="flex flex-col gap-2">
+                                <label for="email" class="text-sm font-medium text-gray-800">email:</label>
+                                <div class="relative">
+                                    <input type="text" class="custom-input-modal" name="" id="email"
+                                        placeholder="Enter Your Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        class="bi bi-envelope  ms-2 w-5 h-5 absolute top-2 left-1 cursor-pointer text-slate-800"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- submit-modal -->
+                            <button class="btn bg-slate-800 text-white modal-btn lg:hover:animate-pulse">Login</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- githubModal -->
+            </div>
+
+            <form class="flex flex-col justify-start w-full gap-4">
+                <div class="flex flex-col gap-2 relative">
+                    <label for="username" class="custom-label">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-person text-gray-800 w-7 h-7 absolute -top-6 left-2 cursor-pointer"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                        </svg>
+                    </label>
+                    <div>
+                        <input type="text" class="custom-input" name="" id="username" placeholder="username">
+                        <div class="errorReq">your name is not valid!</div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 relative">
+                    <label for="password" class="custom-label"> <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            class="bi bi-shield-lock text-gray-800 w-7 h-7 absolute -top-7 left-2 cursor-pointer"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                            <path
+                                d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z" />
+                        </svg></label>
+                    <div>
+                        <input type="password" class="custom-input" name="" id="password" placeholder="password">
+                        <div class="errorReq">your password is not valid!</div>
+                    </div>
+                </div>
+                <a href="https://www.linkedin.com/in/ali-nikseresht-966560258/">
+                    <button class="btn bg-yellow-600 text-white lg:hover:animate-pulse">Login</button>
+                </a>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="js/index.js"></script>
+
+</html>

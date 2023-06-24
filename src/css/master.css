@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-input{
+    @apply h-9 bg-transparent border cursor-pointer border-gray-300 rounded-full w-full focus:outline-none ps-4 caret-white;
+}
+.custom-input-modal{
+    @apply h-9 bg-transparent border cursor-pointer text-sm border-gray-300 rounded-full w-full focus:outline-none ps-9 caret-white;
+}
+.custom-label{
+    @apply text-base font-medium text-gray-800
+}
+.btn{
+    @apply flex items-center justify-center mt-3 w-full h-10 text-base font-medium rounded-2xl shadow-lg;
+}
+.modal-btn{
+    @apply flex items-center justify-center w-full h-10 text-sm font-medium rounded-xl shadow-lg;
+}
+
+.modal-box-link{
+    @apply fixed inset-0 z-10 bg-gray-500 bg-opacity-40 flex items-center justify-center -translate-y-full transition-transform origin-center
+}
+.modal-box-google{
+    @apply fixed inset-0 z-10 bg-gray-500 bg-opacity-40 flex items-center justify-center -translate-y-full transition-transform origin-center
+}
+.modal-box-git{
+    @apply fixed inset-0 z-10 bg-gray-500 bg-opacity-40 flex items-center justify-center -translate-y-full transition-transform origin-center
+}
+.modal-box-reg{
+    @apply fixed inset-0 z-10 bg-gray-500 bg-opacity-40 flex items-center justify-center -translate-y-full transition-transform origin-center
+}
